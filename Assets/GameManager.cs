@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
     public void Save()
     {
         SaveSystem.Instance.SavePlayer();
-        SaveSystem.Instance.SaveToFile();
     }
 
     public void Load()

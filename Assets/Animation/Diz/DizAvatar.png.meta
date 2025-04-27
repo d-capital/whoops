@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DizAvatar_0: 4877971009708017315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

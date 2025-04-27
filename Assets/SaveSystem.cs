@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using Newtonsoft.Json;
+using YG;
 
 
 public class SaveSystem : MonoBehaviour
@@ -29,11 +30,25 @@ public class SaveSystem : MonoBehaviour
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
             Instance = this;
+            if (YandexGame.SDKEnabled) 
+            {
+                LoadSaveCloud();
+            }
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnEnable()
+    {
+        YandexGame.GetDataEvent += LoadSaveCloud;
+    }
+
+    private void OnDisable()
+    {
+        YandexGame.GetDataEvent -= LoadSaveCloud;
     }
 
     public void SavePlayer()
@@ -42,35 +57,12 @@ public class SaveSystem : MonoBehaviour
         string nextSceneName = levelDictinonary[sceneIndex];
         playerData.CurrentLevelName = nextSceneName;
         playerData.MajorState = FindObjectsByType<CharacterDialogue>(FindObjectsSortMode.None).First(x => x.CharacterName == "Major").currenDialogueState;
-    }
-    public void SaveToFile()
-    {
-        string path = Application.persistentDataPath + "/player.fun";
-        PlayerData data = playerData;
-        string json = JsonConvert.SerializeObject(data);
-        File.WriteAllText(path, json);
+        MySave();
     }
 
     public void LoadPlayerData()
     {
-        string path = Application.persistentDataPath + "/player.fun";
-        Debug.Log(path);
-        if (File.Exists(path))
-        {
-            FileStream stream = new FileStream(path, FileMode.OpenOrCreate,
-                                                        FileAccess.ReadWrite,
-                                                        FileShare.ReadWrite);
-            stream.Dispose();
-            var fileContents = File.ReadAllText(path);
-            PlayerData pd = JsonConvert.DeserializeObject<PlayerData>(fileContents);
-            playerData = pd;
-            stream.Dispose();
-            FindObjectsByType<CharacterDialogue>(FindObjectsSortMode.None).First(x => x.CharacterName == "Major").currenDialogueState = playerData.MajorState;
-        }
-        else
-        {
-            Debug.Log("Save file not found in " + path);
-        }
+        LoadSaveCloud();
     }
 
     public string GetNextLevelName(string currentLevelName)
@@ -86,5 +78,17 @@ public class SaveSystem : MonoBehaviour
             string nextLevelName = levelDictinonary[nextLevelIndex];
             return nextLevelName;
         }
+    }
+
+    public void LoadSaveCloud()
+    {
+        playerData.CurrentLevelName = YandexGame.savesData.CurrentLevelName;
+        playerData.MajorState = YandexGame.savesData.MajorState;
+    }
+
+    public void MySave()
+    {
+        YandexGame.savesData.CurrentLevelName = playerData.CurrentLevelName;
+        YandexGame.savesData.MajorState = playerData.MajorState;
     }
 }
