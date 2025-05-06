@@ -90,5 +90,6 @@ public class SaveSystem : MonoBehaviour
     {
         YandexGame.savesData.CurrentLevelName = playerData.CurrentLevelName;
         YandexGame.savesData.MajorState = playerData.MajorState;
+        YandexGame.SaveProgress();
     }
 }
