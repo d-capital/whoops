@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8111843697979687129}
   - component: {fileID: 3564520904469721375}
   - component: {fileID: 7625194567225926436}
+  - component: {fileID: -7092770396656068575}
+  - component: {fileID: 1120631748387110538}
   m_Layer: 5
   m_Name: InventoryChest
   m_TagString: Untagged
@@ -75,3 +77,30 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &-7092770396656068575
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596951308884129622}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1120631748387110538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596951308884129622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fef6b72893d1b24980a6da72b62dae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
+  canvas: {fileID: 0}
+  initObjectPos: {x: 0, y: 0, z: 0}
+  cursor: {fileID: 0}

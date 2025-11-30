@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GrumpyCustomerAvatar_0: -8387082791131652734
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EvieAvatar_0: 2871269398066125299
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

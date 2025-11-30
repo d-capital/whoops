@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BarberAvatar_0: -2921731634588292121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

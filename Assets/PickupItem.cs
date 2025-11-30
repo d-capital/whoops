@@ -15,7 +15,16 @@ public class PickupItem : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Instantiate(inventoryItem, inventory.transform, false);
-        Destroy(gameObject);
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[i] == false)
+            {
+                //Add item to inventory
+                inventory.isFull[i] = true;
+                Instantiate(inventoryItem, inventory.slots[i].transform, false);
+                Destroy(gameObject);
+                break;
+            }
+        }
     }
 }

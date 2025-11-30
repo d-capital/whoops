@@ -1,41 +1,46 @@
-using System;
+﻿using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using YG;
 
-public class DropManager : MonoBehaviour, IDropHandler
+public class DropManager : MonoBehaviour
 {
+    private GameObject draggedObject;
+    public static DropManager Instance;
 
-    public bool objectReceived = false;
-    public AudioSource audioSource;
-    public Texture2D cursor;
-    public void OnDrop(PointerEventData eventData)
+    private void Awake()
     {
-        Debug.Log("OnDrop");
-        if (eventData.pointerDrag != null)
+        if (Instance == null)
         {
-            if (eventData.pointerDrag.GetComponent<InventoryItem>())
-            {
-                objectReceived = true;
-                GameObject.Destroy(eventData.pointerDrag);
-                var DroppableItems = GameObject.FindGameObjectsWithTag("droppable");
-                foreach (var i in DroppableItems)
-                {
-                    i.layer = 0;
-                }
-                eventData.pointerDrag.gameObject.GetComponent<Canvas>().overrideSorting = false;
-                ApplyItem();
-            }
-            else
-            {
-                //eventData.pointerDrag.gameObject.transform.position = eventData.pointerDrag.gameObject.GetComponent<Spawn>().initObjectPos;
-                eventData.pointerDrag.gameObject.GetComponent<Canvas>().overrideSorting = false;
-            }
+            transform.parent = null;
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
-    void ApplyItem() 
-    { 
-        //
+    public void StartDrag(GameObject obj)
+    {
+        draggedObject = obj;
+    }
+
+    public void Drop(Vector2 screenPos)
+    {
+        if (draggedObject == null) return;
+
+        // Проверка попадания в дроп‑зону
+        RaycastHit2D hit = Physics2D.Raycast(screenPos, Vector2.zero);
+        if (hit.collider != null && hit.collider.CompareTag("droppable"))
+        {
+            Debug.Log("Дроп успешно!");
+            // Ваша логика обработки
+            hit.collider.GetComponent<DropAction>().HideItem();
+            Destroy(draggedObject);
+        }
+        draggedObject = null;
     }
 }
