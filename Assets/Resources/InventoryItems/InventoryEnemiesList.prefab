@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6233154492861462264}
   - component: {fileID: 636694266067774090}
   m_Layer: 0
-  m_Name: InventoryRag
+  m_Name: InventoryEnemiesList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1024226415114158248, guid: 61e87151178b3b74680b71491a2c3662, type: 3}
+  m_Sprite: {fileID: -1073665624791690965, guid: d69f98fee4ecc8946a8c74cb25bbcc9f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Diz: {fileID: 0}
-  State: Rag
+  State: EnemiesList
 --- !u!114 &636694266067774090
 MonoBehaviour:
   m_ObjectHideFlags: 0
