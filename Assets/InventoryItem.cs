@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,6 +13,7 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
     public Vector3 initObjectPos;
     public Texture2D cursor;
     public Camera mainCamera;
+    [SerializeField] string itemType;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -80,7 +82,11 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
         Debug.Log("OnDrop");
         if (eventData.pointerDrag != null)
         {
-            
+            if (itemType == "Wax" && eventData.pointerDrag.GetComponent<InventoryItem>().name.Contains("oil"))
+            {
+                Debug.Log("Dropped wax on oil");
+                //Debug.Log(eventData.pointerDrag);
+            }
         }
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
