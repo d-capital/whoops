@@ -36,7 +36,8 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
         }
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
-        initObjectPos = rectTransform.position;
+        gameObject.GetComponent<Canvas>().overrideSorting = true;
+        gameObject.GetComponent<Canvas>().sortingOrder = 300;
         Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
     }
 
@@ -51,7 +52,8 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
         //TODO: throws exception cause toilet door is not there yet on lvl1
         Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
-        canvasGroup.blocksRaycasts = true;
+        
+        gameObject.GetComponent<Canvas>().overrideSorting = false;
         var DroppableItems = GameObject.FindGameObjectsWithTag("droppable");
         foreach (var i in DroppableItems)
         {
@@ -70,6 +72,7 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
     {
         yield return new WaitForSeconds(1.0f);
             rectTransform.anchoredPosition = initObjectPos;
+            canvasGroup.blocksRaycasts = true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -89,5 +92,10 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
             }
         }
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+    }
+
+    public void SetInitObjectPosition()
+    {
+        initObjectPos = gameObject.GetComponent<RectTransform>().anchoredPosition;
     }
 }

@@ -38,8 +38,8 @@ public class DropManager : MonoBehaviour
         {
             Debug.Log("Дроп успешно!");
             // Ваша логика обработки
-            hit.collider.GetComponent<DropAction>().HideItem();
-            Destroy(draggedObject);
+            //hit.collider.GetComponent<DropAction>().HideItem();
+            //Destroy(draggedObject);
         }
         draggedObject = null;
     }

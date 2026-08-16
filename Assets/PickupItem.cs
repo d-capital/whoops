@@ -21,7 +21,14 @@ public class PickupItem : MonoBehaviour
             {
                 //Add item to inventory
                 inventory.isFull[i] = true;
-                Instantiate(inventoryItem, inventory.slots[i].transform, false);
+                GameObject instantiatedItem = Instantiate(inventoryItem, inventory.slots[i].transform, false);
+                //TODO: write down rect transform position
+                instantiatedItem.GetComponent<InventoryItem>();
+                if (instantiatedItem != null)
+                {
+                    instantiatedItem.GetComponentInParent<InventoryItem>().SetInitObjectPosition();
+                }
+
                 Destroy(gameObject);
                 break;
             }
