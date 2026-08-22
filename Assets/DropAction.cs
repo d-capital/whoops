@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class DropAction : MonoBehaviour
 {
-   public void HideItem()
+   public virtual void Activate()
     {
-        gameObject.SetActive(false);
+        Debug.Log("Drop action initiated");
     }
 }
