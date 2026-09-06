@@ -630,6 +630,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157014932}
   m_CullTransparentMesh: 1
+--- !u!1 &167196602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3551903350755149659, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+  m_PrefabInstance: {fileID: 1192107869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &231544034
 GameObject:
   m_ObjectHideFlags: 0
@@ -5501,6 +5506,34 @@ MonoBehaviour:
       Avatar: {fileID: 2871269398066125299, guid: b414bf35feabe444b97c827ad4ab6430, type: 3}
       Line: What is going on, Detective?
       Answers: []
+    - Id: 1
+      Name: Diz
+      Avatar: {fileID: 4877971009708017315, guid: c92ba37479e83f84685ed1b0d7246f3b, type: 3}
+      Line: Wierd case with majors mustache. I don't complain. Another day, another
+        dollar.
+      Answers: []
+  - State: Watch
+    DialogueLines:
+    - Id: 0
+      Name: Evie
+      Avatar: {fileID: 2871269398066125299, guid: b414bf35feabe444b97c827ad4ab6430, type: 3}
+      Line: What is going on, Detective?
+      Answers: []
+    - Id: 1
+      Name: Diz
+      Avatar: {fileID: 4877971009708017315, guid: c92ba37479e83f84685ed1b0d7246f3b, type: 3}
+      Line: Evie, do you have anything shiny, that you wouldn't regret giving away?
+      Answers: []
+    - Id: 2
+      Name: Evie
+      Avatar: {fileID: 2871269398066125299, guid: b414bf35feabe444b97c827ad4ab6430, type: 3}
+      Line: Like, your watch that you have left here?
+      Answers: []
+    - Id: 3
+      Name: Diz
+      Avatar: {fileID: 4877971009708017315, guid: c92ba37479e83f84685ed1b0d7246f3b, type: 3}
+      Line: Uh, well, I guess that will be a fair deal, please give them to me..
+      Answers: []
   gameManager: {fileID: 1274011806}
   currenDialogueState: Initial
   currentDialogueLineId: 0
@@ -5767,13 +5800,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3551903350755149659, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1192107875}
   m_SourcePrefab: {fileID: 100100000, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
 --- !u!4 &1192107870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
   m_PrefabInstance: {fileID: 1192107869}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1192107875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167196602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4333852da72057f4eb8b47ad2bb96a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeDialogueState
+  characterDialogue: {fileID: 1167072316}
+  newState: Watch
 --- !u!1 &1194243840
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,7 +32,7 @@ public class Wax:DropAction
                         instantiatedItem.GetComponentInParent<InventoryItem>().SetInitObjectPosition();
                     }
 
-                    StartCoroutine(WaitAndDestroy(0.5f));
+                    StartCoroutine(WaitAndDestroy(0.1f));
                     return true;
                 }
             }
