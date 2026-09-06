@@ -32,7 +32,7 @@ public class SaveSystem : MonoBehaviour
             Instance = this;
             if (YandexGame.SDKEnabled) 
             {
-                LoadSaveCloud();
+                //LoadSaveCloud();
             }
         }
         else

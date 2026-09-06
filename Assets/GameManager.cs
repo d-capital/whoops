@@ -13,11 +13,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] public CharacterDialogue activeCharacter;
     void Start()
     {
-        Load();
-        if (SaveSystem.Instance.playerData.MajorState != "Return")
-        {
+        //Load();
+        //if (SaveSystem.Instance.playerData.MajorState != "Return")
+        //{
             characters[0].StartDialogue("Initial", false);
-        }
+        //}
     }
 
     void Update()

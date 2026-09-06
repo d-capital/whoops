@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
     [SerializeField] GameObject canvas;
+    public int slotId;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     public Vector3 initObjectPos;

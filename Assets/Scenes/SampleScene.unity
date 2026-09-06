@@ -249,7 +249,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05677655, y: 0.675}
   m_AnchorMax: {x: 0.9332123, y: 0.97628456}
-  m_AnchoredPosition: {x: -5.3499146, y: -3.7600098}
+  m_AnchoredPosition: {x: -5.3496704, y: -3.7600098}
   m_SizeDelta: {x: -25.509995, y: -14.01001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115809160
@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltipUI: {fileID: 1698019374}
   tooltipText: {fileID: 1269420789}
-  text: "\u041F\u0430\u0440\u0438\u043A\u043C\u0430\u0445\u0435\u0440"
+  text: Barber
   mainCamera: {fileID: 519420031}
 --- !u!114 &375528535
 MonoBehaviour:
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad629c507d1d948ab1afab32c6f011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterName: "\u041F\u0430\u0440\u0438\u043A\u043C\u0430\u0445\u0435\u0440"
+  CharacterName: Barber
   Avatar: {fileID: -2921731634588292121, guid: 8693fe9a65d95304da48c175b7a4c9db, type: 3}
   DialogueBoxHandler: {fileID: 115809162}
   AnswerGridControl: {fileID: 1049781182}
@@ -1108,23 +1108,17 @@ MonoBehaviour:
   - State: Initial
     DialogueLines:
     - Id: 0
-      Name: "\u041F\u0430\u0440\u0438\u043A\u043C\u0430\u0445\u0435\u0440"
+      Name: Barber
       Avatar: {fileID: -2921731634588292121, guid: 8693fe9a65d95304da48c175b7a4c9db, type: 3}
-      Line: "\u042D\u0442\u043E\u0442 \u043F\u043E\u043A\u0443\u043F\u0430\u0442\u0435\u043B\u044C
-        \u043D\u0435 \u0432 \u0441\u0435\u0431\u0435."
+      Line: This client is crazy, I swear I don't understand what he wants.
       Answers: []
   - State: Busy
     DialogueLines:
     - Id: 0
-      Name: "\u041F\u0430\u0440\u0438\u043A\u043C\u0430\u0445\u0435\u0440"
+      Name: Barber
       Avatar: {fileID: -2921731634588292121, guid: 8693fe9a65d95304da48c175b7a4c9db, type: 3}
-      Line: "\u0427\u0435\u0440\u0442, \u043A\u0430\u043A\u043E\u0439 \u043B\u0438\u043F\u043A\u0438\u0439
-        \u044D\u0442\u043E\u0442 \u043C\u0443\u0441\u0441!"
-      Answers:
-      - AnswerContent: "\u0414\u0430, \u043E\u043D \u043E\u0442\u043B\u0438\u0447\u043D\u043E
-          \u043F\u043E\u0434\u0445\u043E\u0434\u0438\u0442 \u0434\u043B\u044F \u043F\u0440\u043E\u043A\u0443\u043F\u0438\u043D\u0430."
-        OutputState: Initial
-        character: {fileID: 1077503318}
+      Line: Now I can do this procupin, this gel is so sticky.
+      Answers: []
   gameManager: {fileID: 1274011806}
   currenDialogueState: Initial
   currentDialogueLineId: 0
@@ -1140,6 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0611d3fb0ee3c6b45bc3359c7e952ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Braber
+  closedDoor: {fileID: 1710646755}
 --- !u!1 &481957957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,7 +1169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1773109, y: 0.13732995}
   m_AnchorMax: {x: 0.8533783, y: 0.6517767}
-  m_AnchoredPosition: {x: -3.1700745, y: -0.89998627}
+  m_AnchoredPosition: {x: -3.170044, y: -0.89998627}
   m_SizeDelta: {x: -11.179993, y: -18.990002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481957959
@@ -2481,7 +2476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.42800003, y: 0.16713224}
   m_AnchorMax: {x: 0.52567995, y: 0.3083967}
-  m_AnchoredPosition: {x: 1.5200005, y: -0.5999756}
+  m_AnchoredPosition: {x: 1.5200005, y: -0.59999084}
   m_SizeDelta: {x: -1.1599998, y: -1.8800049}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661682958
@@ -2604,6 +2599,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1578686179}
+    - target: {fileID: -1527883296752332683, guid: 660c249d6a6bf4b42bb645c20ebb2045, type: 3}
+      propertyPath: text
+      value: Oil
+      objectReference: {fileID: 0}
     - target: {fileID: -1527883296752332683, guid: 660c249d6a6bf4b42bb645c20ebb2045, type: 3}
       propertyPath: tooltipUI
       value: 
@@ -2732,6 +2731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
   canvas: {fileID: 587471765}
+  slotId: 3
   initObjectPos: {x: 0, y: 0, z: 0}
   cursor: {fileID: 0}
   mainCamera: {fileID: 519420031}
@@ -2861,6 +2861,180 @@ Transform:
   - {fileID: 1069742013}
   m_Father: {fileID: 2089501974}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &772381137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772381138}
+  - component: {fileID: 772381142}
+  - component: {fileID: 772381141}
+  - component: {fileID: 772381140}
+  - component: {fileID: 772381139}
+  m_Layer: 0
+  m_Name: Portal L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &772381138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772381137}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.26, y: -0.15, z: 0.006055993}
+  m_LocalScale: {x: 1.14427, y: 9.95774, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1807278695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &772381139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772381137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e362fe377ce9f1143b837a110a93d064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipUI: {fileID: 1698019374}
+  tooltipText: {fileID: 1269420789}
+  text: To Barbershop
+  mainCamera: {fileID: 519420031}
+--- !u!114 &772381140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772381137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fe823ef7de3d84a822fb05f03eb45e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPlace: {fileID: 1059188508}
+  targetPlace: {fileID: 996697549}
+  detectiveDiz: {fileID: 1077503315}
+  tragetDetectiveLocation: {fileID: 811106279}
+  detectiveSpriteDirection: 1
+--- !u!61 &772381141
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772381137}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &772381142
+SpriteRenderer:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772381137}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 0.43894252, g: 0.6862745, b: 0.41960785, a: 0.20392157}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!1 &811106279
 GameObject:
   m_ObjectHideFlags: 0
@@ -3305,6 +3479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
   canvas: {fileID: 587471765}
+  slotId: 0
   initObjectPos: {x: 0, y: 0, z: 0}
   cursor: {fileID: 0}
   mainCamera: {fileID: 519420031}
@@ -4329,6 +4504,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnswerButtonPrefab: {fileID: 3849271368961892473, guid: a7543cd0186eaee4cb486f264a29781f, type: 3}
+--- !u!1 &1059188508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059188509}
+  m_Layer: 0
+  m_Name: Place5 - ClosedDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1059188509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059188508}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1807278695}
+  - {fileID: 1557032020}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1069742012
 GameObject:
   m_ObjectHideFlags: 0
@@ -4622,6 +4830,14 @@ MonoBehaviour:
       Name: Diz
       Avatar: {fileID: 4877971009708017315, guid: c92ba37479e83f84685ed1b0d7246f3b, type: 3}
       Line: Nice to whipe out ... the clues!
+      Answers: []
+  - State: RansomeNote
+    DialogueLines:
+    - Id: 0
+      Name: Diz
+      Avatar: {fileID: 4877971009708017315, guid: c92ba37479e83f84685ed1b0d7246f3b, type: 3}
+      Line: So barber wanted one million dollars or he will let majors mustache in
+        the wilds. What might that mean?
       Answers: []
   gameManager: {fileID: 1274011806}
   currenDialogueState: Initial
@@ -5259,7 +5475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltipUI: {fileID: 1698019374}
   tooltipText: {fileID: 1269420789}
-  text: "\u0410\u0441\u0441\u0438\u0441\u0442\u0435\u043D\u0442\u043A\u0430 \u042D\u0432\u0438"
+  text: Assistant Evie
   mainCamera: {fileID: 519420031}
 --- !u!114 &1167072316
 MonoBehaviour:
@@ -5273,7 +5489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad629c507d1d948ab1afab32c6f011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterName: "\u042D\u0432\u0438"
+  CharacterName: Evie
   Avatar: {fileID: 2871269398066125299, guid: b414bf35feabe444b97c827ad4ab6430, type: 3}
   DialogueBoxHandler: {fileID: 115809162}
   AnswerGridControl: {fileID: 1049781182}
@@ -5281,10 +5497,9 @@ MonoBehaviour:
   - State: Initial
     DialogueLines:
     - Id: 0
-      Name: "\u042D\u0432\u0438"
+      Name: Evie
       Avatar: {fileID: 2871269398066125299, guid: b414bf35feabe444b97c827ad4ab6430, type: 3}
-      Line: "\u0414\u0435\u0442\u0435\u043A\u0442\u0438\u0432, \u0447\u0442\u043E
-        \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u0438\u0442?"
+      Line: What is going on, Detective?
       Answers: []
   gameManager: {fileID: 1274011806}
   currenDialogueState: Initial
@@ -5457,6 +5672,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188567791}
   m_CullTransparentMesh: 1
+--- !u!1001 &1192107869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1807278695}
+    m_Modifications:
+    - target: {fileID: -3984543528583452319, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1578686179}
+    - target: {fileID: -1527883296752332683, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: tooltipUI
+      value: 
+      objectReference: {fileID: 1698019374}
+    - target: {fileID: -1527883296752332683, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: -1527883296752332683, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: tooltipText
+      value: 
+      objectReference: {fileID: 1269420789}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.2736695
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.7131438
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0937
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.4095
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.006055993
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055241575723459782, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4783818
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055241575723459782, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_Size.y
+      value: 0.47442114
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055241575723459782, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0074518323
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055241575723459782, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0032848716
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551903350755149659, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+      propertyPath: m_Name
+      value: RansomeNote
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+--- !u!4 &1192107870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 771926119894274173, guid: 1da17dfd878b3d14cab9d2be33b24ddd, type: 3}
+  m_PrefabInstance: {fileID: 1192107869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1194243840
 GameObject:
   m_ObjectHideFlags: 0
@@ -5606,6 +5923,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1578686179}
+    - target: {fileID: -1527883296752332683, guid: 0c5b74820ff665b4f852feeaae0f349d, type: 3}
+      propertyPath: text
+      value: Rag
+      objectReference: {fileID: 0}
     - target: {fileID: -1527883296752332683, guid: 0c5b74820ff665b4f852feeaae0f349d, type: 3}
       propertyPath: tooltipUI
       value: 
@@ -6265,7 +6586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.23964006, y: 0.16713224}
   m_AnchorMax: {x: 0.33532003, y: 0.3083967}
-  m_AnchoredPosition: {x: 0.6199951, y: -0.6000061}
+  m_AnchoredPosition: {x: 0.6199951, y: -0.60002136}
   m_SizeDelta: {x: -0.16000366, y: -1.8800049}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1454089446
@@ -6755,6 +7076,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510368478}
   m_CullTransparentMesh: 1
+--- !u!1 &1540472591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540472592}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1540472592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540472591}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1807278695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541099906
 GameObject:
   m_ObjectHideFlags: 0
@@ -6929,7 +7281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.62132007, y: 0.16713224}
   m_AnchorMax: {x: 0.7253201, y: 0.3083967}
-  m_AnchoredPosition: {x: 0, y: -0.5999756}
+  m_AnchoredPosition: {x: 0, y: -0.59999084}
   m_SizeDelta: {x: -4.1600037, y: -1.8800011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1544531589
@@ -7040,6 +7392,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NumberButton
   assignedNumber: 9
   inputField: {fileID: 1984125517}
+--- !u!1 &1557032019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1557032020}
+  m_Layer: 0
+  m_Name: DizPlace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1557032020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557032019}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.62, y: -1.08, z: 0.004467602}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1059188509}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1578686174
 GameObject:
   m_ObjectHideFlags: 0
@@ -7601,7 +7984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad629c507d1d948ab1afab32c6f011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterName: "\u041C\u044D\u0440"
+  CharacterName: Major
   Avatar: {fileID: 7266584998529060584, guid: 4f863ebf6d929464d9482d32d6a65a10, type: 3}
   DialogueBoxHandler: {fileID: 115809162}
   AnswerGridControl: {fileID: 1049781182}
@@ -7609,115 +7992,92 @@ MonoBehaviour:
   - State: Initial
     DialogueLines:
     - Id: 0
-      Name: "\u041C\u044D\u0440"
+      Name: Major
       Avatar: {fileID: 7266584998529060584, guid: 4f863ebf6d929464d9482d32d6a65a10, type: 3}
-      Line: "\u0414\u0435\u0442\u0435\u043A\u0442\u0438\u0432! \u041E\u043D\u0438
-        \u0438\u0441\u0447\u0435\u0437\u043B\u0438! \u0418\u0441\u0447\u0435\u0437\u043B\u0438!
-        \u041A\u0430\u043A \u0434\u043E\u043C\u0438\u043A \u042D\u043B\u043B\u0438
-        \u0432 \u0431\u0443\u0440\u044E!"
+      Line: Detective! They're gone! Gone! Like Dorothy in a tornado!
       Answers: []
     - Id: 1
-      Name: "\u0414\u0438\u0446"
+      Name: Diz
       Avatar: {fileID: 4877971009708017315, guid: c92ba37479e83f84685ed1b0d7246f3b, type: 3}
-      Line: "\u0412\u0430\u043C \u043F\u0440\u0438\u0434\u0435\u0442\u0441\u044F
-        \u0431\u044B\u0442\u044C \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u0431\u043E\u043B\u0435\u0435
-        \u043A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u044B\u043C, \u0412\u0430\u0448\u0430
-        \u0447\u0435\u0441\u0442\u044C. \u041B\u044E\u0434\u0438 \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u043E
-        \u0442\u0435\u0440\u044F\u044E\u0442 \u0432\u0435\u0449\u0438 \u2014 \u043A\u043B\u044E\u0447\u0438,
-        \u043A\u043E\u0448\u0435\u043B\u044C\u043A\u0438, \u0434\u043E\u0441\u0442\u043E\u0438\u043D\u0441\u0442\u0432\u043E..."
+      Line: "You'll have to be a little more specific, Your Honor. People lose things
+        all the time\u2014keys, wallets, dignity..."
       Answers: []
     - Id: 2
-      Name: "\u041C\u044D\u0440"
+      Name: Major
       Avatar: {fileID: 7266584998529060584, guid: 4f863ebf6d929464d9482d32d6a65a10, type: 3}
-      Line: "\u041C\u043E\u0438 \u0443\u0441\u044B, \u0414\u0438\u0442\u0446! \u041C\u043E\u0438
-        \u043F\u0440\u0435\u043A\u0440\u0430\u0441\u043D\u044B\u0435, \u0440\u043E\u0441\u043A\u043E\u0448\u043D\u044B\u0435,
-        \u043F\u043E\u0431\u0435\u0434\u043E\u043D\u043E\u0441\u043D\u044B\u0435
-        \u0443\u0441\u044B! \u041A\u0442\u043E-\u0442\u043E \u0443\u043A\u0440\u0430\u043B
-        \u0438\u0445 \u0441\u0440\u0435\u0434\u0438 \u043D\u043E\u0447\u0438!"
+      Line: My mustache, Diz! My beautiful, luxurious, victorious mustache! Someone
+        stole it in the middle of the night!
       Answers: []
     - Id: 3
       Name: 
       Avatar: {fileID: 0}
       Line: 
       Answers:
-      - AnswerContent: "\u0412\u044B \u043D\u0435\u0434\u0430\u0432\u043D\u043E \u043D\u0435
-          \u043F\u043E\u0441\u0435\u0449\u0430\u043B\u0438 \u043F\u0430\u0440\u0438\u043A\u043C\u0430\u0445\u0435\u0440\u0430?"
+      - AnswerContent: Have you visited a barber recently?
         OutputState: Braber
         character: {fileID: 1662126093}
-      - AnswerContent: "\u041A\u0442\u043E \u0431\u044B \u043C\u043E\u0433 \u0443\u0440\u043A\u0430\u0441\u0442\u044C
-          \u0412\u0430\u0448\u0438 \u0443\u0441\u044B?"
+      - AnswerContent: Who could tug at your mustache?
         OutputState: Enemies
         character: {fileID: 1662126093}
-      - AnswerContent: "\u042F \u043D\u0430\u0447\u043D\u0443 \u0440\u0430\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0435,
-          \u0441\u044D\u0440."
+      - AnswerContent: I will begin an investigation, sir.
         OutputState: End
         character: {fileID: 1662126093}
   - State: Braber
     DialogueLines:
     - Id: 0
-      Name: "\u041C\u044D\u0440"
+      Name: Major
       Avatar: {fileID: 7266584998529060584, guid: 4f863ebf6d929464d9482d32d6a65a10, type: 3}
-      Line: "\u042D\u0442\u043E \u043D\u0435 \u0448\u0443\u0442\u043A\u0430, \u0434\u0435\u0442\u0435\u043A\u0442\u0438\u0432!
-        \u0411\u0435\u0437 \u0443\u0441\u043E\u0432 \u044F \u043F\u0440\u043E\u0441\u0442\u043E...
-        \u043F\u0430\u0440\u0435\u043D\u044C \u0441 \u043D\u0435\u043E\u0431\u044B\u0447\u043D\u043E
-        \u043F\u043E\u0442\u043D\u043E\u0439 \u0432\u0435\u0440\u0445\u043D\u0435\u0439
-        \u0433\u0443\u0431\u043E\u0439! \u041C\u043E\u0439 \u0440\u0435\u0439\u0442\u0438\u043D\u0433
-        \u043E\u0434\u043E\u0431\u0440\u0435\u043D\u0438\u044F \u0441\u0442\u0440\u0435\u043C\u0438\u0442\u0435\u043B\u044C\u043D\u043E
-        \u043F\u0430\u0434\u0430\u0435\u0442!"
+      Line: This is no joke, detective! Without a mustache, I'm just... a guy with
+        an unusually sweaty upper lip! My approval rating is plummeting!
       Answers: []
     - Id: 1
       Name: 
       Avatar: {fileID: 0}
       Line: 
       Answers:
-      - AnswerContent: "\u0412\u044B \u043D\u0435\u0434\u0430\u0432\u043D\u043E \u043D\u0435
-          \u043F\u043E\u0441\u0435\u0449\u0430\u043B\u0438 \u043F\u0430\u0440\u0438\u043A\u043C\u0430\u0445\u0435\u0440\u0430?"
+      - AnswerContent: Have you visited a barber recently?
         OutputState: Braber
         character: {fileID: 1662126093}
-      - AnswerContent: "\u041A\u0442\u043E \u0431\u044B \u043C\u043E\u0433 \u0443\u043A\u0440\u0430\u0441\u0442\u044C
-          \u0412\u0430\u0448\u0438 \u0443\u0441\u044B?"
+      - AnswerContent: Who could tug at your mustache?
         OutputState: Enemies
         character: {fileID: 1662126093}
-      - AnswerContent: "\u042F \u043D\u0430\u0447\u043D\u0443 \u0440\u0430\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0435,
-          \u0441\u044D\u0440."
+      - AnswerContent: I will begin an investigation, sir.
         OutputState: End
         character: {fileID: 1662126093}
   - State: End
     DialogueLines:
     - Id: 0
-      Name: "\u041C\u044D\u0440"
+      Name: Major
       Avatar: {fileID: 7266584998529060584, guid: 4f863ebf6d929464d9482d32d6a65a10, type: 3}
-      Line: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0414\u0435\u0442\u0435\u043A\u0442\u0438\u0432."
+      Line: Thank you, Detective.
       Answers: []
   - State: Return
     DialogueLines:
     - Id: 0
-      Name: "\u041C\u044D\u0440"
+      Name: Major
       Avatar: {fileID: 7266584998529060584, guid: 4f863ebf6d929464d9482d32d6a65a10, type: 3}
-      Line: "\u0415\u0441\u0442\u044C \u0447\u0442\u043E-\u0442\u043E \u043D\u043E\u0432\u043E\u0435
-        \u043F\u043E \u043F\u043E\u043E\u0432\u043E\u0434\u0443 \u0443\u0441\u043E\u0432?"
+      Line: Anything new about mustaches?
       Answers: []
     - Id: 1
       Name: 
       Avatar: {fileID: 0}
       Line: 
       Answers:
-      - AnswerContent: Did you visit a braber recently?
+      - AnswerContent: Have you visited a barber recently?
         OutputState: Braber
         character: {fileID: 1662126093}
-      - AnswerContent: How would be likely to steal you mustache?
+      - AnswerContent: Who could tug at your mustache?
         OutputState: Enemies
         character: {fileID: 1662126093}
-      - AnswerContent: I will start investigation, sir.
+      - AnswerContent: I will begin an investigation, sir.
         OutputState: End
         character: {fileID: 1662126093}
   - State: Enemies
     DialogueLines:
     - Id: 0
-      Name: "\u041C\u044D\u0440"
+      Name: Major
       Avatar: {fileID: 7266584998529060584, guid: 4f863ebf6d929464d9482d32d6a65a10, type: 3}
-      Line: "\u041E\u0434\u043D\u0430\u0436\u0434\u044B \u043D\u0430 \u043C\u0435\u043D\u044F
-        \u043D\u0430\u043F\u0430\u043B \u0435\u043D\u043E\u0442!"
+      Line: I was attacked by a raccoon once!
       Answers:
       - AnswerContent: Did you visit a braber recently?
         OutputState: Braber
@@ -7729,43 +8089,32 @@ MonoBehaviour:
         OutputState: End
         character: {fileID: 1662126093}
     - Id: 1
-      Name: "\u0414\u0438\u0446"
+      Name: Diz
       Avatar: {fileID: 4877971009708017315, guid: c92ba37479e83f84685ed1b0d7246f3b, type: 3}
-      Line: "\u0410 \u0447\u0442\u043E \u043F\u043E \u043F\u043E\u0432\u043E\u0434\u0443
-        \u0431\u043E\u043B\u0435\u0435 \u0440\u0435\u0430\u043B\u044C\u043D\u044B\u0445
-        \u043F\u0440\u043E\u0442\u0438\u0432\u043D\u0438\u043A\u043E\u0432?"
+      Line: What about more real opponents?
       Answers: []
     - Id: 2
-      Name: "\u041C\u044D\u0440"
+      Name: Major
       Avatar: {fileID: 7266584998529060584, guid: 4f863ebf6d929464d9482d32d6a65a10, type: 3}
-      Line: "\u041E\u0434\u0438\u043D \u0438\u0437 \u043F\u0430\u0440\u043A\u0438\u043C\u0430\u0445\u0435\u0440\u043E\u0432
-        \u043C\u043E\u0435\u0433\u043E \u0441\u043E\u043F\u0435\u0440\u043D\u0438\u043A\u0430
-        \u043D\u0430 \u0432\u044B\u0431\u043E\u0440\u0430\u0445, \u043F\u0440\u0435\u043D\u0438\u043F\u0440\u044F\u0442\u043D\u044B\u0439
-        \u0442\u0438\u043F, \u043B\u044B\u0441\u044B\u0439"
+      Line: One of my opponent's barbers, a neat guy, bald.
       Answers: []
     - Id: 3
-      Name: "\u041C\u044D\u0440"
+      Name: Major
       Avatar: {fileID: 7266584998529060584, guid: 4f863ebf6d929464d9482d32d6a65a10, type: 3}
-      Line: "\u041E\u043D \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u043B \u043C\u043D\u0435
-        \u043D\u0430 \u0441\u043E\u0440\u0435\u0432\u043D\u043E\u0432\u0430\u043D\u0438\u044F\u0445
-        \u0437\u0430 \u043B\u0443\u0447\u0448\u0438\u0435 \u0443\u0441\u044B \u0432
-        \u043F\u0440\u043E\u0448\u043B\u043E\u043C \u0433\u043E\u0434\u0443."
+      Line: He lost to me in the best mustache competition last year.
       Answers: []
     - Id: 4
       Name: 
       Avatar: {fileID: 0}
       Line: 
       Answers:
-      - AnswerContent: "\u0412\u044B \u043D\u0435\u0434\u0430\u0432\u043D\u043E \u043D\u0435
-          \u043F\u043E\u0441\u0435\u0449\u0430\u043B\u0438 \u043F\u0430\u0440\u0438\u043A\u043C\u0430\u0445\u0435\u0440\u0430?"
+      - AnswerContent: Have you visited a barber recently?
         OutputState: Braber
         character: {fileID: 1662126093}
-      - AnswerContent: "\u041A\u0442\u043E \u0431\u044B \u043C\u043E\u0433 \u0443\u043A\u0440\u0430\u0441\u0442\u044C
-          \u0412\u0430\u0448\u0438 \u0443\u0441\u044B?"
+      - AnswerContent: Who could tug at your mustache?
         OutputState: Enemies
         character: {fileID: 1662126093}
-      - AnswerContent: "\u042F \u043D\u0430\u0447\u043D\u0443 \u0440\u0430\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0435,
-          \u0441\u044D\u0440."
+      - AnswerContent: I will begin an investigation, sir.
         OutputState: End
         character: {fileID: 1662126093}
   gameManager: {fileID: 1274011806}
@@ -7841,6 +8190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
   canvas: {fileID: 587471765}
+  slotId: 1
   initObjectPos: {x: 0, y: 0, z: 0}
   cursor: {fileID: 0}
   mainCamera: {fileID: 519420031}
@@ -8098,7 +8448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltipUI: {fileID: 1698019374}
   tooltipText: {fileID: 1269420789}
-  text: "\u0415\u043D\u043E\u0442"
+  text: Racoon
   mainCamera: {fileID: 519420031}
 --- !u!114 &1701081255
 MonoBehaviour:
@@ -8112,7 +8462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad629c507d1d948ab1afab32c6f011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterName: "\u0415\u043D\u043E\u0442"
+  CharacterName: Racoon
   Avatar: {fileID: 8472483644654367893, guid: b5bbd0828b36bde44b6ab51b7799c38b, type: 3}
   DialogueBoxHandler: {fileID: 115809162}
   AnswerGridControl: {fileID: 1049781182}
@@ -8120,10 +8470,9 @@ MonoBehaviour:
   - State: Initial
     DialogueLines:
     - Id: 0
-      Name: "\u0415\u043D\u043E\u0442"
+      Name: Racoon
       Avatar: {fileID: 8472483644654367893, guid: b5bbd0828b36bde44b6ab51b7799c38b, type: 3}
-      Line: "\u0415\u043D\u043E\u0442 \u0432\u043E\u0437\u043C\u0443\u0449\u0435\u043D\u043D\u043E
-        \u0448\u0438\u043F\u0438\u0442."
+      Line: The raccoon hisses indignantly.
       Answers: []
   gameManager: {fileID: 1274011806}
   currenDialogueState: Initial
@@ -8162,7 +8511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1773109, y: 0.6517767}
   m_AnchorMax: {x: 0.8443783, y: 0.8627767}
-  m_AnchoredPosition: {x: -184.20007, y: 0.92500305}
+  m_AnchoredPosition: {x: -184.20004, y: 0.92500305}
   m_SizeDelta: {x: -373.22998, y: -7.790001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701440505
@@ -8278,6 +8627,7 @@ GameObject:
   - component: {fileID: 1710646758}
   - component: {fileID: 1710646759}
   - component: {fileID: 1710646760}
+  - component: {fileID: 1710646761}
   m_Layer: 0
   m_Name: closed_door_0
   m_TagString: Untagged
@@ -8372,7 +8722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad629c507d1d948ab1afab32c6f011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterDialogue
-  CharacterName: "\u041F\u0430\u0440\u0438\u043A\u043C\u0430\u0445\u0435\u0440"
+  CharacterName: Barber
   Avatar: {fileID: -2921731634588292121, guid: 8693fe9a65d95304da48c175b7a4c9db, type: 3}
   DialogueBoxHandler: {fileID: 115809162}
   AnswerGridControl: {fileID: 1049781182}
@@ -8380,11 +8730,18 @@ MonoBehaviour:
   - State: Initial
     DialogueLines:
     - Id: 0
-      Name: "\u041F\u0430\u0440\u0438\u043A\u043C\u0430\u0445\u0435\u0440"
+      Name: Barber
       Avatar: {fileID: -2921731634588292121, guid: 8693fe9a65d95304da48c175b7a4c9db, type: 3}
-      Line: "\u042D\u0442\u0430 \u0434\u0432\u0435\u0440\u044C \u0442\u043E\u043B\u044C\u043A\u043E
-        \u0434\u043B\u044F \u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A\u043E\u0432."
+      Line: Please step aside. This door is for employees only.
       Answers: []
+    - Id: 0
+      Name: Diz
+      Avatar: {fileID: 4877971009708017315, guid: c92ba37479e83f84685ed1b0d7246f3b, type: 3}
+      Line: Hmm, I'm very suspicious about what might be behind that door. If only
+        I could slip through there.
+      Answers: []
+  - State: None
+    DialogueLines: []
   gameManager: {fileID: 1274011806}
   currenDialogueState: Initial
   currentDialogueLineId: 0
@@ -8448,8 +8805,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HoverTip
   tooltipUI: {fileID: 1698019374}
   tooltipText: {fileID: 1269420789}
-  text: "\u0417\u0430\u043A\u0440\u044B\u0442\u0430\u044F \u0434\u0432\u0435\u0440\u044C"
+  text: Closed Door
   mainCamera: {fileID: 519420031}
+--- !u!114 &1710646761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710646755}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fe823ef7de3d84a822fb05f03eb45e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Portal
+  currentPlace: {fileID: 996697549}
+  targetPlace: {fileID: 1059188508}
+  detectiveDiz: {fileID: 1077503315}
+  tragetDetectiveLocation: {fileID: 1557032019}
+  detectiveSpriteDirection: -1
 --- !u!1 &1749383094
 GameObject:
   m_ObjectHideFlags: 0
@@ -9024,6 +9398,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &1807278694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807278695}
+  m_Layer: 0
+  m_Name: Interrior
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807278695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807278694}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0012016296, y: 0.09612789, z: -0.006055993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1192107870}
+  - {fileID: 1540472592}
+  - {fileID: 772381138}
+  m_Father: {fileID: 1059188509}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1841694177
 GameObject:
   m_ObjectHideFlags: 0
@@ -9847,6 +10255,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3576253267740641962, guid: 2f4cf4c8b41396d4783fbb27f0674b01, type: 3}
     - target: {fileID: -1527883296752332683, guid: ee751daf3370dc44a80519f683bd0892, type: 3}
+      propertyPath: text
+      value: Wax
+      objectReference: {fileID: 0}
+    - target: {fileID: -1527883296752332683, guid: ee751daf3370dc44a80519f683bd0892, type: 3}
       propertyPath: tooltipUI
       value: 
       objectReference: {fileID: 1698019374}
@@ -10653,6 +11065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
   canvas: {fileID: 587471765}
+  slotId: 2
   initObjectPos: {x: 0, y: 0, z: 0}
   cursor: {fileID: 0}
   mainCamera: {fileID: 519420031}
@@ -10834,7 +11247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltipUI: {fileID: 1698019374}
   tooltipText: {fileID: 1269420789}
-  text: "\u041A\u043B\u0438\u0435\u043D\u0442"
+  text: Client
   mainCamera: {fileID: 519420031}
 --- !u!114 &2050158371
 MonoBehaviour:
@@ -10848,7 +11261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad629c507d1d948ab1afab32c6f011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterName: "\u041A\u043B\u0438\u0435\u043D\u0442"
+  CharacterName: Client
   Avatar: {fileID: -8387082791131652734, guid: be13558ff704cdc45ae5d5648b142068, type: 3}
   DialogueBoxHandler: {fileID: 115809162}
   AnswerGridControl: {fileID: 1049781182}
@@ -10856,9 +11269,9 @@ MonoBehaviour:
   - State: Initial
     DialogueLines:
     - Id: 0
-      Name: "\u041A\u043B\u0438\u0435\u043D\u0442"
+      Name: Client
       Avatar: {fileID: -8387082791131652734, guid: be13558ff704cdc45ae5d5648b142068, type: 3}
-      Line: "\u042D\u0442\u043E \u043D\u0435 \u043F\u0440\u043E\u043A\u0443\u043F\u0438\u043D!"
+      Line: This is not prokupin! I wanted prokupin, what have you done!
       Answers: []
   gameManager: {fileID: 1274011806}
   currenDialogueState: Initial
@@ -11049,6 +11462,7 @@ SceneRoots:
   - {fileID: 1009614758}
   - {fileID: 996697550}
   - {fileID: 908994412}
+  - {fileID: 1059188509}
   - {fileID: 128385108}
   - {fileID: 92972598}
   - {fileID: 1857751110}

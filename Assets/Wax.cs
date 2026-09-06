@@ -43,6 +43,8 @@ public class Wax:DropAction
     IEnumerator WaitAndDestroy(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+        int slotId = gameObject.GetComponentInParent<InventoryItem>().slotId;
+        inventory.isFull[slotId] = false;
         Destroy(gameObject);
     }
 }

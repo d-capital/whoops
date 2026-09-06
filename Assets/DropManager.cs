@@ -83,6 +83,8 @@ public class DropManager : MonoBehaviour
                         if (result) 
                         {
                             var dialogue = draggedObject.GetComponentInChildren<InventoryItemDialogue>();
+                            int index = draggedObject.GetComponent<InventoryItem>().slotId;
+                            draggedObject.GetComponentInParent<Inventory>().isFull[index] = false;
                             if (dialogue != null) Destroy(dialogue.gameObject);
                         }
                     }
@@ -114,6 +116,8 @@ public class DropManager : MonoBehaviour
                         if (result)
                         {
                             var dialogue = draggedObject.GetComponentInChildren<InventoryItemDialogue>();
+                            int index = draggedObject.GetComponent<InventoryItem>().slotId;
+                            draggedObject.GetComponentInParent<Inventory>().isFull[index] = false;
                             if (dialogue != null) Destroy(dialogue.gameObject);
                         }
                     }
