@@ -45,9 +45,8 @@ public class InventoryItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
     {
 
         var mousePos = Input.mousePosition;
-        var mousePosWorld = mainCamera.ScreenToWorldPoint(mousePos);
-        var mousePosWorld2D = new Vector2(mousePosWorld.x, mousePosWorld.y);
-        DropManager.Instance.Drop(mousePosWorld2D);
+        // Pass screen coordinates to Drop so UI raycasts work correctly.
+        DropManager.Instance.Drop(new Vector2(mousePos.x, mousePos.y));
         //all exceptions shold go here
         //TODO: throws exception cause toilet door is not there yet on lvl1
         Debug.Log("OnEndDrag");

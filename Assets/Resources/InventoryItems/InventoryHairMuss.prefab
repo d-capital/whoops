@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: -2273034001579930922}
   - component: {fileID: 6233154492861462264}
   - component: {fileID: 636694266067774090}
+  - component: {fileID: -3016620084080677439}
   m_Layer: 0
-  m_Name: InventoryRag
-  m_TagString: Untagged
+  m_Name: InventoryHairMuss
+  m_TagString: droppable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,8 +40,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -0.000013351, y: 0}
+  m_SizeDelta: {x: 72.4325, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8211290849097122788
 CanvasRenderer:
@@ -70,7 +71,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1024226415114158248, guid: 61e87151178b3b74680b71491a2c3662, type: 3}
+  m_Sprite: {fileID: 5069681533056542752, guid: cd772c01f54e0fb49b385eefc66034b2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -145,9 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c47ea39c8968f468bd453c77e4014f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ItemName: Rag
+  ItemName: Gel
   Diz: {fileID: 0}
-  State: Rag
+  State: Gel
 --- !u!114 &636694266067774090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,3 +205,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-3016620084080677439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3576253267740641962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccbafc6a4d5f14345a07a9a754b66168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wax
+  inventory: {fileID: 0}
+  inventoryItem: {fileID: 0}

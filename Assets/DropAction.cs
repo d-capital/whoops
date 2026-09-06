@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class DropAction : MonoBehaviour
 {
-   public virtual void Activate()
+   public virtual bool Activate(string itemName)
     {
-        Debug.Log("Drop action initiated");
+        Debug.Log("Drop action initiated: " + itemName);
+        return true;
     }
 }

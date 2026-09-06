@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: -2273034001579930922}
   - component: {fileID: 6233154492861462264}
   - component: {fileID: 636694266067774090}
-  - component: {fileID: 8947737807749698471}
   m_Layer: 0
   m_Name: InventoryOil
   m_TagString: droppable
@@ -146,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c47ea39c8968f468bd453c77e4014f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  ItemName: Oil
   Diz: {fileID: 0}
   State: Oil
 --- !u!114 &636694266067774090
@@ -204,15 +204,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8947737807749698471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3576253267740641962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccbafc6a4d5f14345a07a9a754b66168, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Wax

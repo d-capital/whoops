@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c47ea39c8968f468bd453c77e4014f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  ItemName: Wax
   Diz: {fileID: 0}
   State: Wax
 --- !u!114 &636694266067774090
@@ -216,3 +217,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbafc6a4d5f14345a07a9a754b66168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Wax
+  inventory: {fileID: 0}
+  inventoryItem: {fileID: 3576253267740641962, guid: b0b9aaedaab6bfb4c88565d7abb22c99, type: 3}

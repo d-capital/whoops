@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class Poster: DropAction
 {
-    public override void Activate()
+    public override bool Activate(string itemName)
     {
         Debug.Log("Poster: drop action initiated");
-        gameObject.SetActive(false);
+        if(itemName == "Rag") 
+        {
+            gameObject.SetActive(false);
+            return true;
+        }
+
+        return false;
     }
 }
